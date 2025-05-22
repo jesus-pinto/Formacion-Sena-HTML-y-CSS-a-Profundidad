@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main-nav {
+            list-style: none;
+            padding-left: 0;
+            /* background-color: aqua; */
+            display: flex;
+            gap: 30px;
+        }
+
+        .main-nav-item a {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .main-nav-item {
+            background-color: black;
+            height: 30px;
+            place-content: center;
+            border-radius: 5px;
+            padding: 0 10px;
+            box-shadow: 8px 5px 8px  gray ;
+
+        }
+
+        .main-nav-item a:hover {
+            color: aqua;
+        }
+
+       .main-nav-item a:active{
+        color: red;
+       }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <ul class="main-nav">
+            <li class="main-nav-item"><a href="">Home</a></li>
+            <li class="main-nav-item"><a href="">Blog</a></li>
+            <li class="main-nav-item"><a href="">Instructor</a></li>
+            <li class="main-nav-item"><a href="">Cursos</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
