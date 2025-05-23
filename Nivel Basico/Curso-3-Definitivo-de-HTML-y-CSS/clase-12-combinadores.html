@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .suma {
+            background-color: rgb(185, 192, 197);
+            margin-bottom: 50px;
+        }
+
+        .suma h1+p {
+            color: blue;
+        }
+
+        /* -------------------------------------- */
+        .tilde {
+            margin-bottom: 50px;
+        }
+
+        .tilde h1~p {
+            color: blue;
+        }
+
+        /* --------------------------------------- */
+        .chail {
+            background-color: rgba(0, 255, 255, 0.401);
+        }
+
+        .chail div>p {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--  Hermano adyacente o cercano  -->
+    <div class="suma">
+        <h1>Soy un h1</h1>
+        <p>Soy un p</p>
+        <h3>Soy un h3</h3>
+        <p>Soy un p</p>
+        <h1>Soy un h1</h1>
+        <p>Soy un p</p>
+    </div>
+
+    <!--  Hermano general   -->
+    <div class="tilde">
+        <h1>Soy un h1</h1>
+        <p>Soy un p</p>
+        <h2>Soy un h3</h2>
+        <h3>Soy un h1</h3>
+        <p>Soy un p</p>
+        <p>Soy un p</p>
+    </div>
+
+
+    <!--  Hijo  -->
+    <div class="chail">
+        <div>
+            <article>
+                <p>Soy un texto</p>
+            </article>
+
+            <article>
+                <p>Soy un texto</p>
+            </article>
+
+            <article>
+                <div>
+                    <p>Soy un texto</p>
+                </div>
+            </article>
+
+            <p>Soy un texto</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
