@@ -58,8 +58,13 @@ ul {
 }
 
 .navbar-link a:hover {
-    color: var(--color-rojo);
+    color: var(--white);
+   text-decoration: underline;
 }
+.navbar-link a:active{
+    color: goldenrod;
+}
+
 
 /* cartas de carros parte izquierda-------- */
 
