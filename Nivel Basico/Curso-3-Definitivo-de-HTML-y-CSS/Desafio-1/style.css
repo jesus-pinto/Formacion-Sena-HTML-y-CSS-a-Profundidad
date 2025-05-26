@@ -8,6 +8,8 @@ html {
      box-sizing: border-box;
 }
 
+
+
 ul li {
     list-style: none;
     color: goldenrod;
@@ -19,6 +21,7 @@ body {
   font-family: 'Bebas Neue', sans-serif;
   background-color: black;
   display: flex;
+  width: 100vw;
   justify-content: center;
   align-items: center;
  
@@ -48,7 +51,7 @@ body {
 .media li {
     font-size: 4rem;
     line-height: 1;
-    
+    text-shadow: 2px 2px 4px black;
 }
 
 .media li:nth-child(1) {
@@ -57,15 +60,15 @@ body {
 
 }
 
-.pinto {
+.messi {
     position: absolute;
     z-index: 2;
-    width: 287px;
-    top: 95px;
-    left: 206px;
+    width: 320px;
+    top: 176px;
+    left: 171px;
 }
 
-.venezuela {
+.argentina {
     position: absolute;
     z-index: 2;
     width: 76px;
@@ -73,13 +76,14 @@ body {
     left: 126px;
 }
 
-.barcelona {
+.real-madrid {
     position: absolute;
     z-index: 2;
-    width: 111px;
-    top: 307px;
-    left: 109px;
+    width: 87px;
+    top: 319px;
+    left: 119px;
 }
+
 
 .info-card h1 {
     width: 50%;
@@ -89,6 +93,7 @@ body {
     top: 425px;
     left: 247px;
     color: goldenrod;
+    text-shadow: 2px 2px 4px black;
 }
 
 
@@ -105,4 +110,6 @@ body {
 }
 .juego ul li{
     font-size: 4rem;
+      text-shadow: 2px 2px 4px black;
 }
+
