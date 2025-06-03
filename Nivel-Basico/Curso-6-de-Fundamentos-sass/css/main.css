@@ -144,7 +144,7 @@ section .healthcare .product-card .text-info-card h3, section .furniture .produc
 section .healthcare .product-card .text-info-card p, section .furniture .product-card .text-info-card p {
   font-weight: 400;
   font-size: 1.4rem;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 section .furniture .product-card {
   background-color: #BABD8D;
