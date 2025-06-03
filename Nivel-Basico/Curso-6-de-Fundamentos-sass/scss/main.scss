@@ -107,7 +107,7 @@ article {
     img {
       width: 85%;
       height: 100%;
-      border-radius: 8px;
+      border-radius: 9px;
       
     }
   }
@@ -144,15 +144,18 @@ section{
             .icons{
                 width: 100%;
                 display: flex;
-                justify-content: flex-end;
-                padding: 15px 0;
-                mar
+                justify-content: right;
+                padding: 10px 0;
+                
+               
                 
                 svg{
                     width: 25px;
                     height: 25px;
                     cursor: pointer;
-                    padding: 5px;
+                      margin-right: 15px;
+                    
+                    
                 }
             }
 
@@ -166,7 +169,7 @@ section{
                     border-radius: 8px;
                     margin-top: 15px;
                     width: 75%;
-                    height: 30vh;
+                    height: 33vh;
                     
                 }
             }

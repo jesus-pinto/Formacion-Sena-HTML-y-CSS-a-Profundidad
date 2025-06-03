@@ -81,7 +81,7 @@ article .img-section {
 article .img-section img {
   width: 85%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 9px;
 }
 
 section {
@@ -112,14 +112,14 @@ section .healthcare .product-card, section .furniture .product-card {
 section .healthcare .product-card .icons, section .furniture .product-card .icons {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  padding: 15px 0;
+  justify-content: right;
+  padding: 10px 0;
 }
-section .healthcare .product-card .icons mar svg, section .furniture .product-card .icons mar svg {
+section .healthcare .product-card .icons svg, section .furniture .product-card .icons svg {
   width: 25px;
   height: 25px;
   cursor: pointer;
-  padding: 5px;
+  margin-right: 15px;
 }
 section .healthcare .product-card .product-img, section .furniture .product-card .product-img {
   width: 100%;
@@ -131,7 +131,7 @@ section .healthcare .product-card .product-img img, section .furniture .product-
   border-radius: 8px;
   margin-top: 15px;
   width: 75%;
-  height: 30vh;
+  height: 33vh;
 }
 section .healthcare .product-card .text-info-card, section .furniture .product-card .text-info-card {
   padding: 0 35px;
