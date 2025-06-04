@@ -1,0 +1,28 @@
+@property --color-fondo {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: white;
+}
+
+body {
+    background-color: var(--color-fondo);
+    transition: --color-fondo 1.5s ease-in-out;
+}
+
+body:hover {
+    --color-fondo: blue;
+}
+
+/* <length> Acepta valores de longitud, como px, em, rem, vw, vh, etc.
+<percentage> Acepta valores de porcentaje %
+<color> Acepta valores de color, como nombres de colores, valores hexadecimales, rgb(), rgba(), hsl(), hsla(), etc.
+<number> Acepta valores numéricos.
+<integer> Acepta valores enteros.
+<string> Acepta cadenas de texto.
+<custom-ident> Acepta identificadores personalizados.
+<length-percentage> Acepta valores de longitud y porcentaje.
+<image> Acepta valores de imágenes, como URL de imágenes.
+<url>: Acepta valores de URL.
+<time> Acepta valores de tiempo, como s (segundos) y ms (milisegundos).
+<angle> Acepta valores de ángulo, como deg, rad, grad, turn.
+<transform-function> Acepta funciones de transformación, como rotate(), scale(), translate(). */
