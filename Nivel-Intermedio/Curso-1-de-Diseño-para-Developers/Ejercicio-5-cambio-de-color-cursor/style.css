@@ -1,7 +1,7 @@
 @property --color-fondo {
-    syntax: "<color>";
-    inherits: false;
-    initial-value: white;
+    syntax: "<color>"; /* Define el tipo de sintaxis esperada */
+    inherits: false; /* Indica si la propiedad hereda su valor de un elemento padre */
+    initial-value: white; 
 }
 
 body {
@@ -13,7 +13,8 @@ body:hover {
     --color-fondo: blue;
 }
 
-/* <length> Acepta valores de longitud, como px, em, rem, vw, vh, etc.
+/* 
+<length> Acepta valores de longitud, como px, em, rem, vw, vh, etc.
 <percentage> Acepta valores de porcentaje %
 <color> Acepta valores de color, como nombres de colores, valores hexadecimales, rgb(), rgba(), hsl(), hsla(), etc.
 <number> Acepta valores numéricos.

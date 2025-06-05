@@ -1,0 +1,142 @@
+<!-- 
+ 
+1. :is()
+
+El selector :is() permite agrupar varios selectores en uno solo, 
+reduciendo repetición y mejorando la legibilidad del CSS.
+
+Uso:
+    css
+
+    :is(h1, h2, h3) {
+        color: blue;
+    }
+
+Este ejemplo aplica el color azul a todos los elementos h1, h2 y h3.
+
+¿Para qué sirve?
+
+Agrupa múltiples selectores sin repetir el mismo bloque de reglas.
+Es útil especialmente cuando combinas con otros selectores o pseudo-clases.
+
+/////////////////////////////////////////////////////
+
+2. :hover
+
+El pseudo-selector :hover se aplica cuando el usuario pasa el cursor (mouse) sobre un elemento.
+
+Ejemplo básico:
+    css
+    button:hover {
+        background-color: green;
+        color: white;
+    }
+
+Cuando el usuario pasa el mouse sobre el botón, cambia el color de fondo y el texto.
+
+¿Para qué sirve?
+Para crear interacciones visuales (efectos, transiciones, animaciones).
+
+Mejora la experiencia de usuario y la usabilidad.
+
+Es común en enlaces, botones, menús, tarjetas, etc.
+
+/////////////////////////////////////////////////////
+
+3. :focus
+El pseudo-selector :focus se aplica a un elemento que ha recibido
+el foco del teclado o ratón, como un input al hacer clic o tabular sobre él.
+
+Uso:
+    css
+        input:focus {
+            border-color: blue;
+            outline: none;
+        }
+
+¿Para qué sirve?
+Para mejorar la accesibilidad y usabilidad.
+
+Ayuda a indicar visualmente qué campo está activo.
+
+///////////////////////////////////////////////////////
+
+4. clamp()
+
+La función clamp() en CSS define un valor que puede escalar entre un mínimo, 
+un valor ideal y un máximo.
+
+    Sintaxis:
+    css
+        font-size: clamp(1rem, 2vw, 3rem);
+    Significado:
+        
+        1rem = tamaño mínimo.
+
+        2vw = tamaño ideal relativo al ancho de la ventana (viewport).
+
+        3rem = tamaño máximo.
+
+¿Para qué sirve?
+Para hacer diseños responsivos sin media queries.
+Para que el texto o espaciado se ajuste dinámicamente según el tamaño de la pantalla.
+
+//////////////////////////////////////////////////////////////
+
+Ejemplo combinando los tres:
+    css
+
+    :is(input, textarea):focus {
+        outline: 2px solid blue;
+        font-size: clamp(1rem, 1.5vw, 2rem);
+    }
+Este CSS:
+
+Aplica estilos a input y textarea cuando están en foco.
+
+Ajusta el tamaño de la fuente de forma responsiva con clamp().
+
+/////////////////////////////////////////////////////////////////
+
+ChatGPT Plus
+:focus-within es un selector de CSS que se activa cuando el elemento mismo o cualquiera de sus elementos hijos recibe el foco (focus).
+ ¿Para qué sirve?
+Se usa principalmente en formularios o contenedores para aplicar estilos cuando algún campo dentro del contenedor está enfocado.
+
+Ejemplo práctico
+    
+    HTML
+    
+    <div class="campo">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre">
+    </div>
+   
+    CSS
+
+    .campo {
+        border: 2px solid gray;
+        padding: 10px;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+    }
+
+    .campo:focus-within {
+        border-color: var(--color-primario); /* se activa si el input tiene foco */
+    }
+
+
+¿Qué pasa?
+Al enfocar el <input> (hacer clic o tab), se activa :focus-within en .campo.
+
+Entonces se cambia el borde del contenedor .campo, no solo del input.
+
+ Muy útil cuando quieres:
+Resaltar visualmente un grupo cuando uno de sus campos está activo.
+
+Aplicar animaciones a formularios sin usar JavaScript.
+
+Estilizar formularios accesibles y modernos.
+
+
+-->
