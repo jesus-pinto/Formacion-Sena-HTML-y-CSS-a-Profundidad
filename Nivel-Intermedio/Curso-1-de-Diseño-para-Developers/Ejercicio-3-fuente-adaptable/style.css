@@ -1,0 +1,10 @@
+.container{
+    width: calc(100% - 200px); /* reduce 200px del ancho total */
+    background-color: aquamarine;
+    padding: 20px;
+    text-align: center;
+}
+
+.parrafo{
+    font-size: calc(1rem + 2vw); /* Aumenta el tamaño de fuente en función del ancho de la ventana */
+}

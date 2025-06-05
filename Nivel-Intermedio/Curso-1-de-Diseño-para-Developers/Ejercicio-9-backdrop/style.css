@@ -1,0 +1,32 @@
+body {
+    background: url(https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px) grayscale(50%);
+}
+
+/* Estilo vuelve las letas y el fondo transparente*/
+
+.plus-lighter {
+    color: red;
+    mix-blend-mode: color-burn;
+}
+
+.color-burn {
+    background-color: rgb(191, 0, 0);
+    mix-blend-mode: color-burn;
+}

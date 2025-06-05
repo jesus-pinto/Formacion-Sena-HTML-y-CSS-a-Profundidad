@@ -1,0 +1,33 @@
+.menu{
+    position: relative;
+    display: inline-block; /* Permite que el menú se posicione relativo a su contenedor */
+}
+
+.menu-btn{
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-list{
+    position: absolute;
+    top: 43px;
+    left: 0;
+    background: white;
+    padding: 10px;
+    list-style: none;
+    border: 1px solid #ccc;
+    opacity: 0; /* Usamos opacidad para ocultar el elemento al comienzo */
+    transform: scaleY(0); /* Usamos scaleY para poder comprimir en el eje vertical al comienzo*/
+    transform-origin: top; /* Establecemos el origen de la transformación en la parte superior */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Añadimos transición para suavizar el efecto */
+}
+
+.menu:hover .menu-list,
+.menu:focus-within .menu-list{
+    opacity: 1; /* Hacemos visible el menú al pasar el ratón */
+    transform: scaleY(1); /* Expandimos el menú al pasar el ratón */
+}
+

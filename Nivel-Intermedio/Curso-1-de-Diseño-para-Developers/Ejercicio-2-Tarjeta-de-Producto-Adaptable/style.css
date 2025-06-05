@@ -18,7 +18,7 @@ h1 {
 /* Contenedores para demostración */
 .contenedor-general {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que los contenedores se ajusten en varias filas */
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -46,8 +46,8 @@ h1 {
 
 /* Declaramos el contenedor para las container queries */
 .producto-tarjeta-contenedor {
-    container-type: inline-size;
-    container-name: tarjeta;
+    container-type: inline-size; /* Habilitamos las container queries */
+    container-name: tarjeta; /* Asignamos un nombre al contenedor */
 }
 
 /* Definimos el componente base */

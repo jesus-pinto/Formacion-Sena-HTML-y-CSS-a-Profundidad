@@ -1,0 +1,11 @@
+.caja{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: blue;
+    transition: background-color 1s ease-in-out;
+}
+
+.caja:hover{
+    background-color: color-mix(in srgb, blue 60%, red 40%);
+}
