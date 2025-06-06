@@ -282,7 +282,7 @@
         animation-range: entry 20% cover 50%; /* Define el rango de la animación */
     } 
 
-    /*contactos*/
+    /*contactos formulario*/
 
     .contacto {
         padding: var(--espaciado-xl) 0;
