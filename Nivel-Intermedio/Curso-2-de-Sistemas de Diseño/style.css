@@ -1,0 +1,40 @@
+/* Tokens de diseños para CSS */
+/* Definir los tokens de diseño */ 
+
+:root { 
+
+    /* Colores */ 
+    --color-primary: #3498db; /* Azul principal */ 
+    --color-secondary: #2ecc71; /* Verde secundario */ 
+    --color-background: #f4f4f4; /* Fondo */
+    --color-text: #333333; /* Texto principal */ 
+    --color-text-light: #7f8c8d; /* Texto secundario */ 
+    --color-border: #e1e1e1; /* Borde */
+
+    /* Tipografía */ 
+    --font-family: 'Arial', sans-serif; /*Familia de fuente */ 
+
+    --font-size-small: 14px; /*Tamaño de fuente pequeño */ 
+    --font-size-medium: 16px; /* Tamaño de fuente medio */ 
+    --font-size-large: 24px; /*Tamaño de fuente grande */ 
+    --line-height-small: 1.4; /* Altura de línea pequeña */ 
+    --line-height-medium: 1.6; /* Altura de línea media */
+    --line-height-large: 1.8; /* Altura de línea grande */
+
+    /* Espaciados */ 
+    --spacing-xs: 8px; /* Espaciado extra pequeño */ 
+    --spacing-sm: 16px; /* Espaciado pequeño */
+    --spacing-md: 24px; /* Espaciado medio */ 
+    --spacing-lg: 32px; /* Espaciado grande */
+
+
+    /* Sombras */ 
+    --shadow-small: 0px 2px 4px rgba(0, 0, 0, 0.128); /* Sombra pequeña */ 
+    --shadow-medium: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra media */ 
+    --shadow-large: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra grande */
+
+    /* Bordes */ 
+    --border-radius-small: 4px; /* Radio de borde pequeño */ 
+    --border-radius-medium: 8px; /* Radio de borde medio */ 
+    --border-radius-large: 16px; /* Radio de borde grande */
+}
