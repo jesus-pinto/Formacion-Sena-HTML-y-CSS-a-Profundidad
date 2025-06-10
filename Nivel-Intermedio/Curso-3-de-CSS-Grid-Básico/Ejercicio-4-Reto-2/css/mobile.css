@@ -1,0 +1,65 @@
+.info-inicio {
+    grid-template-columns: 1fr;
+    border-bottom: none;
+    height: auto;
+
+}
+
+.info-inicio .img-inicio {
+    border: dashed 1px rgb(255, 111, 0);
+    padding: 5px 0;
+    height: 100%;
+
+}
+
+.info-inicio .img-inicio img {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.text-info-inicio {
+    text-align: center;
+}
+
+.text-info-inicio h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.text-info-inicio p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+
+}
+
+.text-info-inicio button {
+    padding: 3px 30px;
+    font-size: 0.9rem;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.servicios {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+
+.servicios .img-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+.info-cards h2 {
+    margin-top: 50px;
+}
+
+.card-menu {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.card-menu .img-3 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
