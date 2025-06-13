@@ -1,0 +1,84 @@
+nav .nav-logo img {
+    width: 90%;
+    height: 100%;
+}
+
+nav .nav-logo {
+    width: 130px;
+    height: 50px;
+    margin-left: 10px;
+    padding: 5px 0;
+}
+
+/* ----- blogs  --------------- */
+.blogs-main-new {
+    display: flex;
+    flex-direction: column;
+}
+
+.blogs-new-img-container img {
+    width: 100%;
+}
+
+.blogs-news-info-container {
+    padding-top: 25px;
+}
+
+.blogs-news-container {
+    padding: 0 20px 40px;
+}
+
+/* ------- blog --------------- */
+.blogpost-img-container {
+    padding: 0 20px 40px;
+}
+
+.blogpost-main-container {
+    padding: 0 20px 40px;
+}
+
+
+/* ----- perfil --------------- */
+.perfil-main-info {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 20px 20px 40px;
+}
+
+
+
+.perfil-main-info .img-perfil {
+    display: flex;
+    justify-content: center;
+}
+
+.perfil-proyectos-info .perfil-articles {
+    padding: 0 30px 50px;
+}
+
+.perfil-main-info img {
+    width: 72%;
+   margin-bottom: 75px;
+}
+
+.text-info-perfil h1, .text-info-perfil p{
+    text-align: center;
+}
+
+/* ----- Contacto ------------ */
+
+.contact-left {
+    margin-bottom: 30px;
+}
+
+.contact-left,
+.contact-right {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.contact-main-container img {
+    width: 70px;
+}
