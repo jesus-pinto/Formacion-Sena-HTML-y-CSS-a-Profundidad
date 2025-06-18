@@ -1,0 +1,226 @@
+.primeros-wrappers {
+  display: flex;
+  gap: 5px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 550px;
+}
+.wrapper .container, .wrapper .wrapper3 .container9, .wrapper3 .wrapper .container9, .wrapper .wrapper3 .container8, .wrapper3 .wrapper .container8, .wrapper .wrapper3 .container7, .wrapper3 .wrapper .container7, .wrapper .wrapper3 .container6, .wrapper3 .wrapper .container6, .wrapper .wrapper3 .container5, .wrapper3 .wrapper .container5, .wrapper .wrapper3 .container4, .wrapper3 .wrapper .container4, .wrapper .wrapper3 .container3, .wrapper3 .wrapper .container3, .wrapper .wrapper3 .container2, .wrapper3 .wrapper .container2, .wrapper .wrapper3 .container1, .wrapper3 .wrapper .container1, .wrapper .wrapper2 .container3, .wrapper2 .wrapper .container3, .wrapper .wrapper2 .container2, .wrapper2 .wrapper .container2, .wrapper .wrapper2 .container1, .wrapper2 .wrapper .container1 {
+  background-color: aqua;
+  width: 180px;
+  height: 180px;
+}
+.wrapper .elemento, .wrapper .elemento9, .wrapper .elemento8, .wrapper .elemento7, .wrapper .elemento6, .wrapper .elemento5, .wrapper .elemento4, .wrapper .elemento3, .wrapper .elemento2, .wrapper .elemento1 {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+  background-color: beige;
+}
+.wrapper .elemento1 {
+  margin: 0;
+}
+.wrapper .elemento2 {
+  margin: 60px 0;
+}
+.wrapper .elemento3 {
+  margin: 120px 0;
+}
+.wrapper .elemento4 {
+  margin: 0 auto;
+}
+.wrapper .elemento5 {
+  margin: 60px auto;
+}
+.wrapper .elemento6 {
+  margin: 120px auto;
+}
+.wrapper .elemento7 {
+  margin: 0 0 0 auto;
+}
+.wrapper .elemento8 {
+  margin: 60px 0 0 auto;
+}
+.wrapper .elemento9 {
+  margin: 120px 0 0 auto;
+}
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 550px;
+}
+.wrapper2 .container, .wrapper2 .wrapper3 .container9, .wrapper3 .wrapper2 .container9, .wrapper2 .wrapper3 .container8, .wrapper3 .wrapper2 .container8, .wrapper2 .wrapper3 .container7, .wrapper3 .wrapper2 .container7, .wrapper2 .wrapper3 .container6, .wrapper3 .wrapper2 .container6, .wrapper2 .wrapper3 .container5, .wrapper3 .wrapper2 .container5, .wrapper2 .wrapper3 .container4, .wrapper3 .wrapper2 .container4, .wrapper2 .container3, .wrapper2 .container2, .wrapper2 .container1 {
+  background-color: rgb(58, 188, 106);
+  width: 180px;
+  height: 180px;
+}
+.wrapper2 .elemento, .wrapper2 .elemento9, .wrapper2 .elemento8, .wrapper2 .elemento7, .wrapper2 .elemento6, .wrapper2 .elemento5, .wrapper2 .elemento4, .wrapper2 .elemento3, .wrapper2 .elemento2, .wrapper2 .elemento1 {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+  background-color: beige;
+}
+.wrapper2 .container1 {
+  text-align: left;
+  line-height: 180px;
+}
+.wrapper2 .elemento1 {
+  display: inline-block;
+  line-height: 45px;
+  vertical-align: top;
+}
+.wrapper2 .elemento2 {
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.wrapper2 .elemento3 {
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: bottom;
+}
+.wrapper2 .container2 {
+  text-align: center;
+  line-height: 180px;
+}
+.wrapper2 .elemento4 {
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: top;
+}
+.wrapper2 .elemento5 {
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.wrapper2 .elemento6 {
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: bottom;
+}
+.wrapper2 .container3 {
+  text-align: right;
+  line-height: 180px;
+}
+.wrapper2 .elemento7 {
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: top;
+}
+.wrapper2 .elemento8 {
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.wrapper2 .elemento9 {
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: bottom;
+}
+
+.wrapper3 {
+  margin: 10px 0;
+}
+.wrapper3 .elemento, .wrapper3 .elemento9, .wrapper3 .elemento8, .wrapper3 .elemento7, .wrapper3 .elemento6, .wrapper3 .elemento5, .wrapper3 .elemento4, .wrapper3 .elemento3, .wrapper3 .elemento2, .wrapper3 .elemento1 {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.wrapper3 .elemento1 {
+  background-color: papayawhip;
+  display: inline-block;
+}
+.wrapper3 .elemento2 {
+  background-color: papayawhip;
+  display: inline-block;
+}
+.wrapper3 .elemento3 {
+  background-color: papayawhip;
+  display: inline-block;
+}
+.wrapper3 .elemento4 {
+  background-color: rgb(241, 255, 213);
+  display: inline-block;
+}
+.wrapper3 .elemento5 {
+  background-color: rgb(241, 255, 213);
+  display: inline-block;
+}
+.wrapper3 .elemento6 {
+  background-color: rgb(241, 255, 213);
+  display: inline-block;
+}
+.wrapper3 .elemento7 {
+  background-color: rgb(36, 100, 160);
+  display: inline-block;
+}
+.wrapper3 .elemento8 {
+  background-color: rgb(36, 100, 160);
+  display: inline-block;
+}
+.wrapper3 .elemento9 {
+  background-color: rgb(36, 100, 160);
+  display: inline-block;
+}
+.wrapper3 .container, .wrapper3 .container9, .wrapper3 .container8, .wrapper3 .container7, .wrapper3 .container6, .wrapper3 .container5, .wrapper3 .container4, .wrapper3 .container3, .wrapper3 .container2, .wrapper3 .container1 {
+  background-color: cadetblue;
+  border: 1px solid white;
+  width: 180px;
+  height: 180px;
+}
+.wrapper3 .container1 {
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+}
+.wrapper3 .container2 {
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+}
+.wrapper3 .container3 {
+  display: table-cell;
+  text-align: left;
+  vertical-align: bottom;
+}
+.wrapper3 .container4 {
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+}
+.wrapper3 .container5 {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.wrapper3 .container6 {
+  display: table-cell;
+  text-align: center;
+  vertical-align: bottom;
+}
+.wrapper3 .container7 {
+  display: table-cell;
+  text-align: right;
+  vertical-align: top;
+}
+.wrapper3 .container8 {
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+}
+.wrapper3 .container9 {
+  display: table-cell;
+  text-align: right;
+  vertical-align: bottom;
+}/*# sourceMappingURL=style.css.map */
