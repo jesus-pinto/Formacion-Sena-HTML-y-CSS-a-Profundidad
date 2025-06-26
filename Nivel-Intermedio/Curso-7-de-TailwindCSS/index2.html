@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section style="margin: 20px;">
+
+        <button class="btn">CSS</button>
+
+        <button class="bg-blue-700 text-white px-4 rounded py-2">
+            TailwindCSS
+        </button>
+
+        <!-- Tamaño de textos -->
+        <p class="text-sm">Texto SM</p>
+        <p class="text-base">Texto Base</p>
+        <p class="text-lg">Texto LG</p>
+        <p class="text-xl">Texto XL</p>
+        <p class="text-2xl">Texto 2XL</p>
+
+        <!-- GRosor de textos -->
+        <p class="font-thin">Texto Delgado</p>
+        <p class="font-normal">Texto Delgado</p>
+        <p class="font-bold">Texto Delgado</p>
+        <p class="font-extrabold">Texto Delgado</p>
+
+        <!-- Estilos de textos -->
+        <p class="italic">Texto cursivo</p>
+        <p class="not-italic">Texto cursivo</p>
+
+        <!-- Alineacion de textos -->
+        <p class="text-left">Alinear</p>
+        <p class="text-center">Alinear</p>
+        <p class="text-right">Alinear</p>
+        <p class="text-justify">Alinear</p>
+
+        <!-- Espaciado de textos -->
+        <p class="tracking-wide">Espaciado</p>
+        <p class="tracking-tighter">Espaciado</p>
+        <p class="tracking-none">Espaciado</p>
+        <p class="tracking-loose">Espaciado</p>
+
+        <!-- colores de textos -->
+        <p class="text-yellow-600">Colores</p>
+        <p class="text-blue-600">Colores</p>
+        <p class="text-red-600">Colores</p>
+
+        <!-- margin total, padding total -->
+        <div class="m-4 p-6 bg-blue-200">
+            Caja margen y padding
+        </div>
+
+        <!-- margin separados B-L-R-T -->
+        <div class="mb-4 ml-4 mr-4 mt-4 p-6 bg-blue-200">
+            Caja margen y padding
+        </div>
+
+        <!-- margin de izquerda a derecha -->
+        <div class="mx-4 p-6 bg-blue-200">
+            Caja margen y padding
+        </div>
+
+        <!-- crea   bordes    tamaño curva   sombra      border-color               fondo    -->
+        <div class="border-4  rounded-xl   shadow-2xl border-blue-500 p-4 mt-8 bg-blue-100">
+            Caja brodes
+        </div>
+
+        <!-- fondo en los textos -->
+        <div class="bg-green-200 mt-6 p-4">Texto</div>
+
+        <!-- gradiente -->
+        <div class="mt-8 bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 p-4 text-white">
+            Gradiente
+        </div>
+
+        <!-- cambia el color e la caja segun el tamaño e la pantalla -->
+        <div
+            class="bg-blue-500 sm:bg-green-500 md:bg-red-500 lg:bg-yellow-500 text-md text-white sm:text-base md:text-lg  lg:text-xl p-6 mt-6">
+            Color segun tamaño de pantalla
+        </div>
+
+        <!-- gradiente -->
+        <div class="bg-gradient-to-r from-blue-300 via-blue-600 to-black text-white mt-6 p-6">
+
+            <!-- hace que los textos se oculten segun el tamaño de las pantallas -->
+            <p class="block sm:hidden">Visible solo en pantallas pequeñas</p>
+            <p class="hidden sm:block md:hidden">Visible solo en pantallas medianas</p>
+            <p class="hidden md:block">Visible solo en pantallas grandes</p>
+        </div>
+    </section>
+
+    <section class="bg-gray-300" style="margin: 20px;">
+
+        <!-- se ajusta automaticamente al centro -->
+        <div class="container mx-auto bg-white p-4">
+
+            <h1 class="text-2xl font-bold">Titulo</h1>
+            <p class="text-gray-700">Este contenedor esta centrado y se ajusta al ancho automaticamente</p>
+
+        </div>
+
+        <div class="flex justify-center items-center gap-4 h-screen  bg-gray-100">
+            <div class="w-32 h-32 bg-blue-300">Elemento 1</div>
+            <div class="w-32 h-32 bg-red-300">Elemento 2</div>
+            <div class="w-32 h-32 bg-yellow-300">Elemento 3</div>
+        </div>
+
+        <div class="flex flex-col items-center gap-4 p-4 text-center bg-gray-200">
+            <div class="w-32 h-32 bg-blue-300">Elemento 1</div>
+            <div class="w-32 h-32 bg-red-300">Elemento 2</div>
+            <div class="w-32 h-32 bg-yellow-300">Elemento 3</div>
+        </div>
+
+        <div class="flex justify-between items-center h-32 px-4 my-4">
+            <div class="w-32 h-32 bg-blue-300 flex items-center justify-center">Elemento 1</div>
+            <div class="w-32 h-32 bg-red-300">Elemento 2</div>
+            <div class="w-32 h-32 bg-yellow-300">Elemento 3</div>
+        </div>
+
+        <div class="flex h-32 bg-slate-200">
+            <div class="flex-1 bg-blue-300">Elemento 1</div>
+            <div class="flex-1 bg-red-300">Elemento 2</div>
+            <div class="flex-none bg-yellow-300">Elemento 3</div>
+        </div>
+    </section>
+
+
+    <!------------- Display grid ---------------->
+    <section class="bg-slate-200" style="margin: 20px;">
+        <div class="grid grid-cols-3 gap-4 my-4">
+            <div class="bg-emerald-300 p-4">Elemento 1</div>
+            <div class="bg-cyan-700 p-4">Elemento 2</div>
+            <div class="bg-indigo-600 p-4">Elemento 3</div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-4 ">
+            <img class="rounded-lg shadow-lg" src="https://placehold.co/150" alt="">
+            <img class="rounded-lg shadow-lg" src="https://placehold.co/150" alt="">
+            <img class="rounded-lg shadow-lg" src="https://placehold.co/150" alt="">
+            <img class="rounded-lg shadow-lg" src="https://placehold.co/150" alt="">
+            <img class="rounded-lg shadow-lg" src="https://placehold.co/150" alt="">
+            <img class="rounded-lg shadow-lg" src="https://placehold.co/150" alt="">
+            <img class="rounded-lg shadow-lg" src="https://placehold.co/150" alt="">
+        </div>
+
+         <div class="grid grid-cols-4 gap-4 mt-4">
+            <div class="bg-emerald-300 p-4 col-span-2">Elemento 1</div>
+            <div class="bg-cyan-700 p-4">Elemento 2</div>
+            <div class="bg-indigo-600 p-4">Elemento 3</div>
+            <div class="bg-fuchsia-700 p-4 row-span-3 col-span-3">Elemento 4</div>
+            <div class="bg-orange-700 p-4">Elemento 5</div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .btn {
+            background-color: blue;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
