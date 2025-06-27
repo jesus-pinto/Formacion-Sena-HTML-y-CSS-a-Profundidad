@@ -1,0 +1,30 @@
+
+.contenedor{
+    background-color: rgba(13, 211, 13, 0.6);
+    border: solid 1px black;
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 100px 100px;
+    grid-auto-flow: column;
+    gap: 15px;
+    place-content: center; /* Centra el contenido en ambas direcciones */
+}
+
+.item {
+    background-color: green;
+    text-align: center;
+    display: flex;
+    justify-content: end; /* derecha */
+    align-items: end; /* abajo */
+}
+
+p{
+    background-color: greenyellow ;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 30px;
+    height: 40px;
+    margin: 0;
+}
+

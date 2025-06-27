@@ -1,0 +1,115 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+
+
+
+ul li {
+    list-style: none;
+    color: goldenrod;
+}
+
+
+
+body {
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: black;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.card {
+  position: relative;
+  width: 90vw;
+  max-width: 400px;
+}
+
+
+
+.fondo {
+    height: 800px;
+    position: absolute;
+    z-index: 1;
+}
+
+.media {
+    position: absolute;
+    z-index: 2;
+    top: 145px;
+    left: 133px;
+}
+
+.media li {
+    font-size: 4rem;
+    line-height: 1;
+    text-shadow: 2px 2px 4px black;
+}
+
+.media li:nth-child(1) {
+    font-size: 6rem;
+    height: 50px;
+
+}
+
+.messi {
+    position: absolute;
+    z-index: 2;
+    width: 320px;
+    top: 176px;
+    left: 171px;
+}
+
+.argentina {
+    position: absolute;
+    z-index: 2;
+    width: 76px;
+    top: 255px;
+    left: 126px;
+}
+
+.real-madrid {
+    position: absolute;
+    z-index: 2;
+    width: 87px;
+    top: 319px;
+    left: 119px;
+}
+
+
+.info-card h1 {
+    width: 50%;
+    position: absolute;
+    z-index: 2;
+    font-size: 5rem;
+    top: 425px;
+    left: 247px;
+    color: goldenrod;
+    text-shadow: 2px 2px 4px black;
+}
+
+
+.juego{
+    width: 100%;
+    display: grid;
+    position: absolute;
+    z-index: 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    top: 502px;
+    left: 148px;
+  
+}
+.juego ul li{
+    font-size: 4rem;
+      text-shadow: 2px 2px 4px black;
+}
+

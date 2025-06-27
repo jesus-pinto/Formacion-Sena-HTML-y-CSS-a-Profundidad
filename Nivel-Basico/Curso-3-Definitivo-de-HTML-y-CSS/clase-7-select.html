@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        margin-top: 50px;
+        display: grid;
+        place-content: center;
+        justify-items: center;
+    }
+</style>
+
+<body>
+    <main>
+
+
+        <!-- Primera forma de hacerlo "menos recomendada" -->
+        <div>
+            <p>Selector Basico</p>
+            <select name="cursos" id="">
+                <option value="JavaScrip">JavaScrip</option>
+                <option value="HTML5">HTML5</option>
+                <option value="CSS3">CSS3</option>
+                <option value="Web Standards">Web Standards</option>
+            </select>
+        </div>
+
+
+        <!-- Segunda forma de hacer, mas expecifica y aceptada -->
+        <div>
+            <p>Selector Avanzado</p>
+            <input list="cursos">
+            <datalist id="cursos">
+                <option value="JavaScrip"></option>
+                <option value="HTML5"></option>
+                <option value="CSS3"></option>
+                <option value="Web Standards"></option>
+            </datalist>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+ /* ===== VARIABLES CSS GLOBALES ===== */
+      :root {
+        /* Colores principales usando el nuevo formato OKLCH para mejor representación de colores */
+        --color-primario: oklch(49% 0.29 264);       /* Azul profundo */
+        --color-secundario: oklch(85% 0.14 156);     /* Verde suave */
+        --color-oscuro: oklch(25% 0.02 240);         /* Casi negro */
+        --color-claro: oklch(98% 0.005 240);         /* Casi blanco */
+        
+        /* Uso de clamp() para tamaños de fuente responsivos que se ajustan automáticamente 
+           basados en el viewport sin necesidad de media queries */
+        --tamano-fuente-peq: clamp(0.8rem, 0.7rem + 0.5vw, 1rem);
+        --tamano-fuente-base: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+        --tamano-fuente-grande: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+        --tamano-fuente-xl: clamp(2rem, 1.8rem + 1vw, 3rem);
+        
+        /* Espaciado */
+        --espaciado-xs: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem); 
+        --espaciado-peq: clamp(0.75rem, 0.65rem + 0.5vw, 1rem);
+        --espaciado-med: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+        --espaciado-grande: clamp(1.5rem, 1.4rem + 0.5vw, 2.5rem);
+        --espaciado-xl: clamp(2rem, 1.8rem + 1vw, 4rem);
+        
+        /* Bordes */
+        --radio-borde: 8px;
+    }
+
+    /* ===== RESET BÁSICO ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--color-oscuro);
+        background-color: var(--color-claro);
+        
+        /* cambio color fondo*/
+        background-color: var(--color-fondo);
+        transition: background-color 1s ease-in-out;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block; 
+    }
+
+    /* ===== Contenedor principal para @container queries ===== */
+    .contenedor-principal{
+        container-type: inline-size; /* Permite que el contenedor se ajuste al tamaño del viewport */
+        container-name: principal; /* Nombre del contenedor para referencia */
+        width: 100%;
+        max-width: 1200px; /* Ancho máximo para evitar que se extienda demasiado en pantallas grandes */
+        margin: 0 auto; /* Centra el contenedor */
+        padding: var(--espaciado-med);
+    }
+
+    .cabecera{
+        padding: var(--espaciado-grande); /* Espaciado alrededor de la cabecera */
+        text-align: center;
+    }
+
+    .barra-navegacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--espaciado-peq) var(--espaciado-med); /* Espaciado interno de la barra de navegación */
+        margin-bottom: var(--espaciado-grande); /* Espaciado inferior para separar de la sección principal */
+        border-radius: var(--radio-borde);
+        background-color: color-mix(in oklch, var(--color-primario) 15%, var(--color-claro)); /* Mezcla de colores para un fondo más suave */
+    }
+
+    /* Estilos para los enlaces de navegación */
+    .enlaces-nav {
+        display: flex;
+        gap: var(--espaciado-peq); /* Espacio entre los enlaces */
+    }
+    
+    .enlaces-nav a {
+        color: var(--color-oscuro);
+        text-decoration: none;
+        font-size: var(--tamano-fuente-peq);
+        padding: var(--espaciado-xs); /* Espaciado interno de los enlaces */
+        border-radius: var(--radio-borde);
+        transition: all 0.3s ease; /* Transición suave para el hover */
+    }
+
+    :is(.enlaces-nav a:hover, .enlaces-nav a:focus) {
+        background-color: var(--color-primario); /* Cambia el fondo al pasar el mouse o enfocar */
+        color: var(--color-claro); /* Cambia el color del texto al pasar el mouse o enfocar */
+    }
+
+   /*seccion Hero*/
+   .hero{
+        position: relative;
+        padding: var(--espaciado-xl) 0;
+        text-align: center;
+        overflow: hidden; /* Evita que el contenido se desborde */
+
+    }
+
+   .hero h1{
+        font-size: var(--tamano-fuente-xl);
+        margin-bottom: var(--espaciado-med);
+        --color-destacado: var(--color-secundario); /* Color destacado para el título */
+    }
+
+   .hero:has(.boton-accion:hover) h1 {
+        --color-destacado: var(--color-primario); /* Cambia el color del título al pasar el mouse sobre el botón */
+         text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45); 
+    }
+
+    /* Cambia el color de fondo del body */
+    body:has(.boton-accion:hover) {
+        --color-fondo: var(--color-secundario);
+    }
+  
+    .hero h1 span{
+        color: var(--color-destacado); /* Aplica el color destacado al texto dentro del span */
+        transition: all 0.3s ease; /* Transición suave para el cambio de color */  
+       
+    }
+
+    .hero p{
+        font-size: var(--tamano-fuente-grande);
+        max-width: 800px; /* Ancho máximo para el párrafo */
+        margin: 0 auto var(--espaciado-grande); 
+        color: var(--color-oscuro);
+    }
+
+    .boton-accion{
+        display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+        padding: var(--espaciado-peq) var(--espaciado-grande);
+        font-size: var(--tamano-fuente-base);
+        font-weight: bold;
+        color: var(--color-claro);
+        background-color: var(--color-primario);
+        border: none;
+        border-radius: var(--radio-borde);
+        text-decoration: none;
+        transition: all 0.3s ease; /* Transiciones suaves */
+        cursor: pointer;
+    }
+
+    .boton-accion:hover{
+        transform: scale(calc(1 + 0.05)); /* Hace zoom el botón al pasar el mouse */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.34);
+    }
+
+    /*seccion de proyectos -----------------------------*/
+    .proyectos {
+        padding: var(--espaciado-xl) 0;
+         
+        /*definimod timeline de scroll para animaciones basadas en scroll*/
+        view-timeline-name: --scroll-proyectos; /* Nombre de la línea de tiempo para referencia */
+        view-timeline-axis: block; /* Define el eje de la línea de tiempo como bloque */ 
+    }
+
+    .proyectos h2{
+        font-size: var(--tamano-fuente-grande);
+        text-align: center;
+        margin-bottom: var(--espaciado-grande);
+        
+        /*Animacion basada en scroll usando view-timeline*/
+        animation: aparecer linear;
+        animation-timeline: --scroll-proyectos; /* Asocia la animación con la línea de tiempo */
+        animation-range: entry 10% cover 20%; /* Define el rango de la animación */
+    }
+
+    .cuadricula-proyectos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta automáticamente el número de columnas */
+        gap: var(--espaciado-grande); /* Espacio entre los elementos de la cuadrícula */
+    }
+
+    .tarjeta-proyecto {
+        background-color: var(--color-claro);
+        border-radius: var(--radio-borde);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Evita que el contenido se desborde */
+        /*para usar content-visibility y mejorar performance*/
+        content-visibility: auto; /* Permite que el navegador optimice la visibilidad del contenido */
+        contain-intrinsic-size: 0 300px; /* Estimamos una altura mínima para la tarjeta */
+        transition: transform 0.3s ease; 
+    }
+
+    .tarjeta-proyecto:hover {
+        transform: translateY(-5px); /* Eleva la tarjeta al pasar el mouse */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el mouse */
+    }
+
+    .imagen-proyecto {
+        height: 200px; 
+        position: relative;
+        overflow: hidden; /* Evita que la imagen se desborde */
+    }
+    .imagen-proyecto img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        /*Aplicacion de mix-blend-mode para efectos visuales interesantes*/
+        mix-blend-mode: multiply; /* Mezcla la imagen con el fondo de la tarjeta */
+        filter: grayscale(50%); /* Aplica un filtro de escala de grises para un efecto sutil */
+        transition: all 0.5s ease; 
+    }
+
+    .tarjeta-proyecto:hover .imagen-proyecto img{
+        filter: grayscale(0%); /* Elimina el filtro al pasar el mouse */
+        mix-blend-mode: normal; /* Restablece el modo de mezcla al pasar el mouse */
+       
+    }
+
+    .contenido-proyecto{
+        padding: var(--espaciado-grande);
+    }
+
+    .contenido-proyecto h3{
+        font-size: var(--tamano-fuente-grande);
+        margin-bottom: var(--espaciado-peq);
+    }
+
+    .contenido-proyecto p{
+        font-size: var(--tamano-fuente-base);
+        margin-bottom: var(--espaciado-peq);
+    }
+
+    .etiquetas-proyecto{
+        display: flex;
+        flex-wrap: wrap; /* Permite que las etiquetas se ajusten en varias líneas */
+        gap: var(--espaciado-xs); 
+        margin-top: var(--espaciado-peq);
+    }
+
+    .etiqueta{
+        background-color: color-mix(in oklch, var(--color-primario) 30%, var(--color-claro));
+        padding: calc(var(--espaciado-xs) / 2) var(--espaciado-xs);/* Espaciado interno reducido para etiquetas */
+        border-radius: var(--radio-borde);
+        font-size: var(--tamano-fuente-peq);
+    }
+
+   .tarjeta-proyecto:hover .etiqueta {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease;
+    }
+
+    /* ===== Sección de habilidades ===== */
+
+    .habilidades {
+        padding: var(--espaciado-xl) 0;
+        background-color: color-mix(in oklch, var(--color-primario) 10%, var(--color-claro)); /* Fondo suave para la sección de habilidades */
+    }
+
+    .habilidades h2 {
+        font-size: var(--tamano-fuente-xl);
+        text-align: center;
+        margin-bottom: var(--espaciado-grande);
+    }
+
+    .contenedor-habilidades {
+        display: flex;
+        flex-wrap: wrap; /* Permite que las tarjetas de habilidades se ajusten en varias líneas */
+        gap: var(--espaciado-med); /* Espacio entre las tarjetas */
+        justify-content: center; /* Centra las tarjetas horizontalmente */
+    }
+
+    .item-habilidad {
+        position: relative;
+        padding: var(--espaciado-med);
+        border-radius: var(--radio-borde);
+        background-color: var(--color-claro);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: calc(33% - var(--espaciado-med)); /* Ancho del 33% menos el espaciado */
+        min-width: 200px; /* Ancho mínimo para mantener la legibilidad */
+        text-align: center;
+        /*para animation-timeline basada en scroll*/
+        animation: deslizar 1s ease;
+        animation-timeline: view();
+        animation-range: entry 20% cover 50%; /* Define el rango de la animación */
+    } 
+
+    /*contactos formulario*/
+
+    .contacto {
+        padding: var(--espaciado-xl) 0;
+        text-align: center;
+    }
+
+    .contacto h2 {
+        font-size: var(--tamano-fuente-xl);
+        margin-bottom: var(--espaciado-grande);
+    }
+
+    .formulario-contacto {
+        max-width: 600px; /* Ancho máximo del formulario */
+        margin: 0 auto; /* Centra el formulario */
+        padding: var(--espaciado-med);
+        background-color: var(--color-claro);
+        border-radius: var(--radio-borde);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .grupo-formulario {
+        margin-bottom: var(--espaciado-med);
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .grupo-formulario label {
+        display: block; /* Hace que la etiqueta ocupe toda la línea */
+        margin-bottom: var(--espaciado-xs); /* Espacio entre la etiqueta y el campo de entrada */
+        font-size: var(--tamano-fuente-base);
+        font-weight: 500;
+       
+    }
+
+    .control-formulario {
+        width: 100%; /* Hace que el campo de entrada ocupe todo el ancho del formulario */
+        padding: var(--espaciado-xs);
+        border: 1px solid var(--color-oscuro);
+        border-radius: var(--radio-borde);
+        font-size: var(--tamano-fuente-base);
+    }
+
+    .grupo-formulario:focus-within label {
+        color: var(--color-primario); /* Cambia el color de la etiqueta al enfocar el campo */
+    }   
+
+    .grupo-formulario:focus-within .control-formulario {
+        border-color: var(--color-primario); /* Cambia el borde del campo al enfocar */
+        box-shadow: 0 0 5px color-mix(in oklch, var(--color-primario) 30%, transparent); /* Añade un efecto de sombra al enfocar el campo */
+        outline: none; /* Elimina el contorno predeterminado del navegador */
+    }
+    
+    .boton-accion2{
+        display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+        padding: var(--espaciado-peq) var(--espaciado-grande);
+        font-size: var(--tamano-fuente-base);
+        font-weight: bold;
+        color: var(--color-claro);
+        background-color: var(--color-primario);
+        border: none;
+        border-radius: var(--radio-borde);
+        text-decoration: none;
+        transition: all 0.3s ease; /* Transiciones suaves */
+        cursor: pointer;
+    }
+
+    .boton-accion2:hover{
+        transform: scale(calc(1 + 0.05)); /* Hace zoom el botón al pasar el mouse */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.34);
+    }
+
+    /*footer*/
+    .pie-pagina {
+        padding: var(--espaciado-grande) 0;
+        background-color: var(--color-oscuro);
+        color: var(--color-claro);
+        text-align: center;
+    }
+
+    .enlaces-sociales{
+        display: flex;
+        justify-content: center; /* Centra los enlaces sociales */
+        gap: var(--espaciado-med); /* Espacio entre los iconos sociales */
+        margin-bottom: var(--espaciado-med);
+    }
+
+    .enlaces-sociales a{
+        color: var(--color-claro);
+        text-decoration: none;
+        font-size: var(--tamano-fuente-grande);  
+        transition: transform 0.3s ease; /* Transición suave para el hover */
+    }
+
+    .enlaces-sociales a:hover {
+        transform: translateY(-5px); /* Eleva el icono al pasar el mouse */
+        color: var(--color-secundario); /* Cambia el color al pasar el mouse */
+    }
+
+
+
+
+    /*Animaciones*/
+    @keyframes aparecer {
+        from { 
+            opacity: 0; /* Comienza invisible */
+            transform: translateY(30px); /* Desplazamiento inicial */
+        }
+        to {
+            opacity: 1; /* Se vuelve visible */
+            transform: translateY(0); /* Regresa a su posición original */
+        }
+    }
+   
+    @keyframes deslizar {
+        from { 
+            transform: translateY(30px);
+            opacity: 0; /* Comienza invisible */
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    /* container query*/
+
+    @container principal (max-width: 768px){
+        .cuadricula-proyectos {
+            grid-template-columns:  1fr;
+        }
+
+        .item-habilidad{
+            width: calc(50% - var(--espaciado-med)); /* Ancho del 50% menos el espaciado */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .enlaces-nav{
+            gap: var(--espaciado-peq); /* Reduce el espacio entre los enlaces en pantallas pequeñas */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .barra-navegacion {
+            flex-direction: column; /* Cambia la dirección de la barra de navegación a columna */
+        }
+
+        .item-habilidad {
+            width: 90%; /* Hace que las tarjetas de habilidades ocupen todo el ancho en pantallas pequeñas */
+        }
+    }

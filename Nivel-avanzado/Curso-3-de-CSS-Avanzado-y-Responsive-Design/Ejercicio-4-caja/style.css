@@ -1,0 +1,8 @@
+.caja{
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: auto;
+}

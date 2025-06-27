@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+
+        }
+
+        .card {
+            width: 400px;
+            height: 360px;
+            background-color: black;
+            border-radius: 20px;
+            position: relative;
+            padding-top: 60px;
+
+
+        }
+
+        .card .icono {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            justify-content: center;
+            margin: 50%;
+            top: -65%;
+            transform: translateX(-50%);
+            border: 4px solid white;
+            z-index: 5;
+        }
+
+        .card .fondo {
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+            z-index: 1;
+        }
+
+        .card h1 {
+            position: relative;
+            z-index: 2;
+            margin-top: 30px;
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .card h1 span {
+            color: #ff943f;
+
+
+        }
+
+        .card p {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 8px;
+            color: white;
+            margin-top: 40px;
+            font-size: 1.2em;
+
+        }
+
+        .link {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+
+        }
+
+
+        .link .explorar {
+            background-color: #6d00cc;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .link .hablar {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            color: #6d00cc;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <div class="card">
+            <img class="icono" src="https://mir-s3-cdn-cf.behance.net/user/276/aae54c1261909977.65ca2f87ebbe9.png"
+                alt="ITGlobers">
+            <img class="fondo"
+                src="https://cdn.prod.website-files.com/66f9e1fddd1ac240116bcb02/6779cc59b822ef7734e2db61_Principal%20Banner%20Home%20(3).webp"
+                alt="">
+            <h1>Soluciones Ecommerce para un <span> crecimiento ilimitado</span></h1>
+            <p>Aumenta las ventas digitales de tu negocio para un futuro ideal. 🛒</p>
+
+            <div class="link">
+                <a class="explorar" href="https://www.itglobers.com/es#services-spanish" target="_blank" rel="noopener" >Explorar servicios </a>
+                <a class="hablar" href="https://www.itglobers.com/es#english-form" target="_blank" rel="noopener">Hablar de ventas</a>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+
+</html>

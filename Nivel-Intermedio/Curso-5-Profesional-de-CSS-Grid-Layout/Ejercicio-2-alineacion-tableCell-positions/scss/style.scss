@@ -1,0 +1,194 @@
+body{
+    display: flex;
+    gap: 10px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    width: 550px;
+
+    .container{
+        background-color: aqua;
+        width: 180px;
+        height: 180px;
+        position: relative;
+
+    }
+    .elemento{
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        padding-top: 10px;
+        box-sizing: border-box  ;
+    }
+
+    .elemento1{
+        @extend .elemento;
+        background-color: yellow;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .elemento2{
+        @extend .elemento;
+        background-color: yellow;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%)
+    }
+
+    .elemento3{
+        @extend .elemento;
+        background-color: yellow;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        transform: translate(0, -100%);
+    }
+    .elemento4{
+        @extend .elemento;
+        background-color: blue;
+        color: white;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .elemento5{
+        @extend .elemento;
+        background-color: blue;
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .elemento6{
+        @extend .elemento;
+        background-color: blue;
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -100%);
+    }
+    .elemento7{
+        @extend .elemento;
+        background-color: red;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        transform: translate(-100%, 0);
+    }
+    .elemento8{
+        @extend .elemento;
+        background-color: red;
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translate(-100%, -50%);
+    }
+    .elemento9{
+        @extend .elemento;
+        background-color: red;
+        position: absolute;
+        left: 100%;
+        top: 100%;
+        transform: translate(-100%, -100%);
+    }
+}
+.wrapper2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    width: 550px;
+
+    .container{
+        background-color: aqua;
+        width: 180px;
+        height: 180px;
+        position: relative;
+    }
+    .elemento{
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        padding-top: 10px;
+        box-sizing: border-box  ;
+    }
+    .elemento1{
+        @extend .elemento;
+        background-color: yellow;
+
+    }
+
+    .elemento2{
+        @extend .elemento;
+        background-color: blue;
+        color: white;
+    }
+ 
+    .elemento3{
+        @extend .elemento;
+        background-color: red;
+    }
+    
+    .container1{
+        @extend .container;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .container2{
+        @extend .container;
+        display: flex;
+        justify-content: flex-start ;
+        align-items: center;
+    }
+    .container3{
+        @extend .container;
+        display: flex;
+        justify-content: flex-start ;
+        align-items: flex-end ;
+    }
+    .container4{
+        @extend .container;
+        display: flex;
+        justify-content: center ;
+        align-items: flex-start;
+    }
+    .container5{
+        @extend .container;
+        display: flex;
+        justify-content: center ;
+        align-items: center ;
+    }
+    .container6{
+        @extend .container;
+        display: flex;
+        justify-content: center ;
+        align-items:  flex-end;
+    }
+    .container7{
+        @extend .container;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    .container8{
+        @extend .container;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .container9{
+        @extend .container;
+        display: flex;
+        justify-content: flex-end ;
+        align-items: flex-end;
+    }
+    
+}

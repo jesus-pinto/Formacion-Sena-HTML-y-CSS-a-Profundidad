@@ -1,0 +1,163 @@
+body {
+  display: flex;
+  gap: 10px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  width: 550px;
+}
+.wrapper .container, .wrapper .wrapper2 .container9, .wrapper2 .wrapper .container9, .wrapper .wrapper2 .container8, .wrapper2 .wrapper .container8, .wrapper .wrapper2 .container7, .wrapper2 .wrapper .container7, .wrapper .wrapper2 .container6, .wrapper2 .wrapper .container6, .wrapper .wrapper2 .container5, .wrapper2 .wrapper .container5, .wrapper .wrapper2 .container4, .wrapper2 .wrapper .container4, .wrapper .wrapper2 .container3, .wrapper2 .wrapper .container3, .wrapper .wrapper2 .container2, .wrapper2 .wrapper .container2, .wrapper .wrapper2 .container1, .wrapper2 .wrapper .container1 {
+  background-color: aqua;
+  width: 180px;
+  height: 180px;
+  position: relative;
+}
+.wrapper .elemento, .wrapper .elemento9, .wrapper .elemento8, .wrapper .elemento7, .wrapper .elemento6, .wrapper .elemento5, .wrapper .elemento4, .wrapper .elemento3, .wrapper .elemento2, .wrapper .elemento1 {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.wrapper .elemento1 {
+  background-color: yellow;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wrapper .elemento2 {
+  background-color: yellow;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.wrapper .elemento3 {
+  background-color: yellow;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translate(0, -100%);
+}
+.wrapper .elemento4 {
+  background-color: blue;
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.wrapper .elemento5 {
+  background-color: blue;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .elemento6 {
+  background-color: blue;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.wrapper .elemento7 {
+  background-color: red;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transform: translate(-100%, 0);
+}
+.wrapper .elemento8 {
+  background-color: red;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+.wrapper .elemento9 {
+  background-color: red;
+  position: absolute;
+  left: 100%;
+  top: 100%;
+  transform: translate(-100%, -100%);
+}
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  width: 550px;
+}
+.wrapper2 .container, .wrapper2 .container9, .wrapper2 .container8, .wrapper2 .container7, .wrapper2 .container6, .wrapper2 .container5, .wrapper2 .container4, .wrapper2 .container3, .wrapper2 .container2, .wrapper2 .container1 {
+  background-color: aqua;
+  width: 180px;
+  height: 180px;
+  position: relative;
+}
+.wrapper2 .elemento, .wrapper2 .elemento3, .wrapper2 .elemento2, .wrapper2 .elemento1, .wrapper2 .wrapper .elemento4, .wrapper .wrapper2 .elemento4, .wrapper2 .wrapper .elemento5, .wrapper .wrapper2 .elemento5, .wrapper2 .wrapper .elemento6, .wrapper .wrapper2 .elemento6, .wrapper2 .wrapper .elemento7, .wrapper .wrapper2 .elemento7, .wrapper2 .wrapper .elemento8, .wrapper .wrapper2 .elemento8, .wrapper2 .wrapper .elemento9, .wrapper .wrapper2 .elemento9 {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.wrapper2 .elemento1 {
+  background-color: yellow;
+}
+.wrapper2 .elemento2 {
+  background-color: blue;
+  color: white;
+}
+.wrapper2 .elemento3 {
+  background-color: red;
+}
+.wrapper2 .container1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.wrapper2 .container2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.wrapper2 .container3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.wrapper2 .container4 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.wrapper2 .container5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper2 .container6 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.wrapper2 .container7 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.wrapper2 .container8 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.wrapper2 .container9 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}/*# sourceMappingURL=style.css.map */

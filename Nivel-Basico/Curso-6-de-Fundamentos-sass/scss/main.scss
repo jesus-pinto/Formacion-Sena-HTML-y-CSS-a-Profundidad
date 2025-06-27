@@ -1,0 +1,297 @@
+// Colores principales de la marca
+$primary-color: #FFEFE7; 
+$secundary-color: #FFDAC6; 
+$tertiary-color: #BABD8D; 
+$primary-text-color: #7C6A0A; 
+$quaternary-color: #FA9500; 
+
+// Tipografía principal
+$font-stack: "IBM Plex Sans", sans-serif;
+
+html{
+    font-size: 62.5%; // 1rem = 10px 
+}
+
+// Mixin para centrar con Flexbox en diferentes direcciones
+@mixin flexCenter($direction,$content,$align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+// Mixin para estilizar botones de forma consistente
+@mixin buttonStyle{
+    button{
+        background: none;
+        border-style: none;
+        cursor: pointer;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $primary-color;
+    font-family: $font-stack;
+    box-sizing: border-box;
+    color: $primary-text-color;
+}
+
+nav{ 
+    width: 90vw;
+    height: 50px;
+    margin: 0 auto;
+    @include flexCenter(row, space-between, center); // Usa mixin para distribuir y alinear elementos
+    color: $primary-text-color;
+    padding: 10px 30px;
+
+    p{
+        font-size: 2rem;
+    }
+    .icons{
+        display: flex;
+        gap: 8px;
+        @include buttonStyle; // Usa estilos estándar para botones
+    }
+}
+
+article {
+  color: $primary-text-color;
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+
+  .impact-section {
+    margin-top: 80px;
+    width: 50%;
+    height: 80vh; 
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    p {
+      margin-top: 50px;
+      font-size: 2rem;
+    }
+
+    button {
+      background-color: $quaternary-color;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      width: 170px;
+      height: 40px;
+      font-size: 2rem;
+      border-radius: 35px;
+      margin-top: 50px;
+
+      &:hover {
+        transform: scale(1.1); // Efecto visual al pasar el mouse
+      }
+    }
+  }
+
+  .img-section {
+    margin-top: 80px;
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+      width: 85%;
+      height: 100%;
+      border-radius: 9px;
+      
+    }
+  }
+}
+
+section{
+    width: 90vw;
+    height: auto;
+    margin: 0 auto;
+
+    h2{
+        color: $primary-text-color;
+        font-size: 4rem;
+        margin-top: 60px;
+        font-weight: 400;
+    }
+
+    .healthcare {
+        .card-section{
+            display: flex;
+            flex-wrap: wrap; // Permite que las tarjetas se acomoden responsivamente
+            gap: 30px;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+
+        .product-card{
+            width: 22vw;
+            height: auto;
+            border-radius: 8px;
+            background-color: #FFDAC6;
+            margin-bottom: 40px;
+
+            .icons{
+                width: 100%;
+                display: flex;
+                justify-content: right;
+                padding: 10px 0;
+                
+               
+                
+                svg{
+                    width: 25px;
+                    height: 25px;
+                    cursor: pointer;
+                    margin-right: 16px;
+                    
+                    
+                }
+            }
+
+            .product-img{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+
+                img{
+                    border-radius: 8px;
+                    margin-top: 15px;
+                    width: 75%;
+                    height: 33vh;
+                    
+                }
+            }
+
+            .text-info-card {
+                padding: 0 35px;
+                
+
+                h3{
+                    font-weight: 400;
+                    font-size: 2.2rem;
+                    line-height: 1;
+                }
+
+                p{
+                    font-weight: 400;
+                    font-size: 1.4rem;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .furniture{
+        @extend .healthcare; // Hereda estilos de healthcare
+        .product-card{
+            background-color: $tertiary-color;
+            color: white;
+        }
+    }
+}
+
+.about-us{
+    padding-bottom: 60px;
+    h2{
+        padding-bottom: 60px;
+    }
+
+    .mission-section{
+        @include flexCenter(row, space-evenly, center);
+
+        .earth{
+            width: 30vw;
+            display: flex;
+            gap: 40px;
+
+            img{
+                object-fit: contain;
+            }
+            p{
+                color: #E86424;
+                text-align: center;
+                font-size: 2rem;
+            }
+        }
+        .innovacion {
+            @extend .earth; // Reutiliza los estilos de .earth
+        }
+    }
+}
+
+.gallery{
+
+    .gallery-img{
+        @include flexCenter(row, space-between, center); // Centrado de imágenes en fila
+
+        img{
+            width: 28vw;
+            height: 45vh;
+            object-fit: cover;
+            border-radius: 16px;
+            &:hover{
+                transform: scale(1.1); // Zoom al pasar el mouse
+            }
+        }
+    }
+}
+
+.location{
+    color: #E86424;
+    h3{
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+    p{
+        font-size: 2rem;
+        padding-bottom: 70px
+        
+    }
+    .map{
+        @include flexCenter(row, center , center );
+        padding-top: 40px;
+        padding-bottom: 20px;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+footer{
+    $background: #FA9500;
+    background-color: $background; // Usa variable local
+    width: 100%;
+    height: auto;
+    color: white;
+    
+    .info-footer{
+        padding-top: 30px;
+        width: 90vw;
+        margin: 0 auto;
+        font-size: 1.6rem
+    }
+    .social-media{
+        @include flexCenter(row, center, center );
+        gap:20px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        
+        img{
+            width: 40px;
+            cursor: pointer;
+        }
+    }
+}
