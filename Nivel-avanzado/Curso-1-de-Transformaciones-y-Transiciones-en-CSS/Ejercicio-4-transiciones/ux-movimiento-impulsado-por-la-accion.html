@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            border-radius: 0;
+            transition:
+                transform 2s linear, 
+                border-radius 0.3s linear 0.5s,  
+                background-color 1s linear;
+        }
+
+        div:hover {
+            transition: 
+                transform 1s linear, 
+                border-radius 0.3s linear 0.5s,  
+                background-color 2s linear;
+            
+            transform: translateX(200px) scale(1.2) rotate(180deg) ;
+            border-radius: 50%;
+            background-color:  red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
