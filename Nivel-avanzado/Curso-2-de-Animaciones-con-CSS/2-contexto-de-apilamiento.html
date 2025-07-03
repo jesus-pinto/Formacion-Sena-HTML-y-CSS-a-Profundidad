@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .phone {
+            position: relative;
+            border: 8px solid black;
+            border-radius: 40px;
+            width: 300px;
+            height: 600px;
+            background-color: #CCEFFF;
+            box-shadow: 0 19px 38px rgb(0, 0, 0, 0.30), 0 15px 12px rgb(0, 0, 0, 0.22);
+            overflow: hidden;
+            counter-reset: game;
+        }
+
+        input:checked {
+            counter-increment: game;
+        }
+
+        .total-conteo::after {
+            content: counter(game);
+        }
+
+        input[type=checkbox] {
+            position: absolute;
+            width: 50%;
+            height: 30px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 32px;
+            z-index: 2;
+            opacity: 0;
+        }
+
+        .layer-1 {
+            bottom: 0;
+            position: absolute;
+            z-index: 1;
+            height: 450px;
+            width: 80px;
+            left: 60px;
+
+            animation-name: layer;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes layer {
+            0% {
+                bottom: 0;
+            }
+
+            25% {
+                bottom: -80px;
+            }
+
+            100% {
+                bottom: 0;
+            }
+        }
+
+
+
+
+        .layer-2 {
+            position: absolute;
+            z-index: 2;
+            height: 450px;
+            width: 80px;
+            bottom: 0;
+            right: 60px;
+
+            animation-name: layer;
+            animation-duration: 550ms;
+            animation-timing-function: cubic-bezier(0.705, 0.135, 0.15, 0.86);
+            animation-iteration-count: infinite;
+        }
+
+        .layer-2 {
+            animation: layer 700ms infinite cubic-bezier(0.39, 0.575, 0.565, 1);
+        }
+
+        .layer-3 {
+            position: absolute;
+            z-index: 3;
+            width: 220px;
+            height: 400px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 0;
+            /* -------------- */
+            background-color: blue;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 5px 10px rgb(0, 0, 0, 2);
+            overflow: hidden;
+        }
+
+        .layer-4 {
+            position: absolute;
+            z-index: 4;
+            height: 340px;
+            width: 80px;
+            bottom: 0;
+            left: 25px;
+
+            animation-name: layer;
+            animation-duration: 400ms;
+            animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+            animation-iteration-count: infinite;
+        }
+
+        .layer-5 {
+            position: absolute;
+            z-index: 5;
+            width: 190px;
+            height: 290px;
+            bottom: 0;
+            /* ---------- */
+            background-color: rgb(85, 85, 137);
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 5px 10px rgb(0, 0, 0, 2);
+            overflow: hidden;
+        }
+
+        .layer-6 {
+            position: absolute;
+            z-index: 6;
+            width: 80px;
+            height: 240px;
+            bottom: 0;
+            right: 30px;
+
+
+            animation-name: layer;
+            animation-duration: 1.2s;
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            animation-iteration-count: infinite;
+        }
+
+        .layer-7 {
+            position: absolute;
+            z-index: 7;
+            width: 150px;
+            height: 190px;
+            right: 0;
+            bottom: 0;
+            /* --------- */
+            background-color: brown;
+            box-shadow: 0 5px 10px rgb(0, 0, 0, 2);
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+        }
+
+        .layer-8 {
+            position: absolute;
+            z-index: 8;
+            width: 160px;
+            height: 90px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+        }
+
+        .layer-9 {
+            position: absolute;
+            z-index: 9;
+            width: 110px;
+            height: 90px;
+            bottom: 0;
+
+        }
+
+        .layer-10 {
+            position: absolute;
+            z-index: 10;
+            width: 110px;
+            height: 90px;
+            bottom: 0;
+            right: 0;
+
+        }
+
+        .triangulos {
+            width: 100%;
+            height: 40px;
+            background:
+                linear-gradient(135deg, green 40%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, green 40%, transparent 25%) -50px 0;
+            background-size: 30px 50px;
+
+        }
+
+        .oreja-der {
+            background-color: papayawhip;
+            width: 20px;
+            height: 50px;
+            border-radius: 90%;
+            position: absolute;
+            left: 10px;
+        }
+
+        .oreja-der-int {
+            background-color: pink;
+            width: 10px;
+            height: 50px;
+            border-radius: 95%;
+            position: absolute;
+            left: 15px;
+            top: 8px;
+        }
+
+        .oreja-izq {
+            background-color: papayawhip;
+            width: 20px;
+            height: 50px;
+            border-radius: 90%;
+            position: absolute;
+            right: 10px;
+        }
+
+        .oreja-izq-int {
+            background-color: pink;
+            width: 10px;
+            height: 50px;
+            border-radius: 95%;
+            position: absolute;
+            right: 15px;
+            top: 8px;
+        }
+
+        .cabeza {
+            position: absolute;
+            width: 100%;
+            height: 80px;
+            border-radius: 50%;
+            background-color: papayawhip;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 30px;
+        }
+
+        .ojos {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: rgb(53, 55, 75);
+            top: 15px;
+            border-radius: 50%;
+
+            animation-name: blink;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                height: 4px;
+            }
+
+            5% {
+                transform: translate(0px, 2px);
+                height: 1px;
+            }
+
+            10% {
+                transform: translate(0px, 0px);
+                height: 4px;
+            }
+        }
+
+        .ojo-izq {
+            left: 30px;
+        }
+
+        .ojo-der {
+            right: 30px;
+        }
+
+        .layer-2 .oreja-der {
+            background-color: gray;
+        }
+
+        .layer-2 .oreja-izq {
+            background-color: gray;
+        }
+
+        .layer-2 .cabeza {
+            background-color: gray;
+        }
+
+        .layer-4 .oreja-der {
+            background-color: gray;
+        }
+
+        .layer-4 .oreja-izq {
+            background-color: gray;
+        }
+
+        .layer-4 .cabeza {
+            background-color: gray;
+        }
+
+        .layer-8 .albusto-izq {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: green;
+            top: 10px;
+            border-radius: 100%;
+            transform: rotate(-20deg);
+            box-shadow: 0 5px 10px rgb(0, 0, 0, 2);
+            z-index: 1;
+        }
+
+        .layer-8 .albusto-cent {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: green;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border-radius: 100%;
+
+            z-index: 2;
+        }
+
+        .layer-8 .albusto-der {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: green;
+            top: 10px;
+            right: 0;
+            border-radius: 100%;
+            transform: rotate(30deg);
+            box-shadow: 0 5px 10px rgb(0, 0, 0, 2);
+            z-index: 1;
+        }
+
+        .layer-8 .albusto-abajo {
+            position: absolute;
+            height: 90px;
+            width: 100%;
+            background-color: green;
+            bottom: -42px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+
+            z-index: 2;
+        }
+
+        .layer-9 .albusto-izq {
+            position: absolute;
+            width: 70px;
+            height: 90px;
+            background-color: white;
+            top: 15px;
+            left: -2px;
+            border-radius: 100%;
+            box-shadow: 0 5px 10px rgb(0, 0, 0, 2);
+            z-index: 1;
+        }
+
+        .layer-9 .albusto-cent {
+            position: absolute;
+            width: 55px;
+            height: 50px;
+            background-color: white;
+            bottom: 0;
+            right: 15px;
+            border-radius: 100%;
+            transform: rotate(-20deg);
+            box-shadow: 0 5px 10px rgb(0, 0, 0, 2);
+            z-index: 1;
+        }
+
+        .layer-9 .albusto-der {
+            position: absolute;
+            width: 60px;
+            height: 50px;
+            background-color: white;
+            bottom: 0;
+            left: 20px;
+            margin: 0 auto;
+            border-radius: 80%;
+            z-index: 2;
+        }
+
+        .layer-10 .albusto-izq {
+            position: absolute;
+            width: 70px;
+            height: 90px;
+            background-color: white;
+            top: 15px;
+            right: 0;
+            border-radius: 100%;
+            box-shadow: 0 5px 10px rgb(0, 0, 0, 2);
+            transform: rotate(10deg);
+            z-index: 1;
+        }
+
+        .layer-10 .albusto-cent {
+            position: absolute;
+            width: 60px;
+            height: 55px;
+            background-color: white;
+            bottom: 0;
+           left: 12px;
+            border-radius: 100%;
+            transform: rotate(40deg);
+            box-shadow: 0 5px 10px rgb(0, 0, 0, 2);
+            z-index: 1;
+        }
+
+        .layer-10 .albusto-der {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            bottom: 0;
+            right: 16px;
+            margin: 0 auto;
+            border-radius: 80%;
+            z-index: 2;
+        }
+
+
+
+
+        h2 {
+            text-align: center;
+            font-family: "Gloria Hallelujah", cursive;
+            font-weight: 600;
+            font-size: 25PX;
+        }
+
+        h3 {
+            font-family: "Gloria Hallelujah", cursive;
+            font-weight: 600;
+            font-size: 25px;
+            margin-top: -15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="phone">
+        <h2>Conejitos saltarines</h2>
+        <!-- conejo 1 -->
+        <div class="layer-1">
+            <input type="checkbox">
+            <div class="oreja-der"></div>
+            <div class="oreja-der-int"></div>
+            <div class="oreja-izq"></div>
+            <div class="oreja-izq-int"></div>
+
+            <div class="cabeza">
+                <div class="ojos ojo-izq"></div>
+                <div class="ojos ojo-der"></div>
+            </div>
+        </div>
+
+        <!-- conejo 2 -->
+        <div class="layer-2">
+            <input type="checkbox">
+            <div class="oreja-der"></div>
+            <div class="oreja-der-int"></div>
+            <div class="oreja-izq"></div>
+            <div class="oreja-izq-int"></div>
+
+            <div class="cabeza">
+                <div class="ojos ojo-izq"></div>
+                <div class="ojos ojo-der"></div>
+            </div>
+        </div>
+
+        <!-- triangulos 1 -->
+        <div class="layer-3">
+            <div class="triangulos"></div>
+        </div>
+
+        <!-- conejo 3 -->
+        <div class="layer-4">
+            <input type="checkbox">
+            <div class="oreja-der"></div>
+            <div class="oreja-der-int"></div>
+            <div class="oreja-izq"></div>
+            <div class="oreja-izq-int"></div>
+
+            <div class="cabeza">
+                <div class="ojos ojo-izq"></div>
+                <div class="ojos ojo-der"></div>
+            </div>
+        </div>
+
+        <!-- triangulos 2 -->
+        <div class="layer-5">
+            <div class="triangulos"></div>
+        </div>
+
+        <!-- conejo 4 -->
+        <div class="layer-6">
+            <input type="checkbox">
+            <div class="oreja-der"></div>
+            <div class="oreja-der-int"></div>
+            <div class="oreja-izq"></div>
+            <div class="oreja-izq-int"></div>
+
+            <div class="cabeza">
+                <div class="ojos ojo-izq"></div>
+                <div class="ojos ojo-der"></div>
+            </div>
+        </div>
+
+        <!-- triangulos 3 -->
+        <div class="layer-7">
+            <div class="triangulos"></div>
+        </div>
+
+        <div class="layer-8">
+            <div class="albusto-izq"></div>
+            <div class="albusto-cent"></div>
+            <div class="albusto-der"></div>
+            <div class="albusto-abajo"></div>
+        </div>
+        <div class="layer-9">
+            <div class="albusto-izq"></div>
+            <div class="albusto-cent"></div>
+            <div class="albusto-der"></div>
+        </div>
+        <div class="layer-10">
+            <div class="albusto-izq"></div>
+            <div class="albusto-cent"></div>
+            <div class="albusto-der"></div>
+        </div>
+
+        <h3 class="total-conteo">Puntos: </h3>
+    </div>
+</body>
+
+</html>
