@@ -1,0 +1,125 @@
+/* diseño de conejos */
+.oreja-der { 
+    width: 20px;
+    height: 50px;
+    border-radius: 90%;
+    position: absolute;
+    left: 10px;
+}
+
+.oreja-der-int {
+    background-color: pink;
+    width: 10px;
+    height: 50px;
+    border-radius: 95%;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+}
+
+.oreja-izq {
+    width: 20px;
+    height: 50px;
+    border-radius: 90%;
+    position: absolute;
+    right: 10px;
+}
+
+.oreja-izq-int {
+    background-color: pink;
+    width: 10px;
+    height: 50px;
+    border-radius: 95%;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+}
+
+.cabeza {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 30px;
+}
+
+.ojo-izq {
+    left: 30px;
+}
+
+.ojo-der {
+    right: 30px;
+}
+
+.ojos {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: rgb(53, 55, 75);
+    top: 15px;
+    border-radius: 50%;
+
+    animation-name: parpadeo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes parpadeo {
+    0% {
+        height: 4px;
+    }
+
+    5% {
+        transform: translate(0px, 2px);
+        height: 1px;
+    }
+
+    10% {
+        transform: translate(0px, 0px);
+        height: 4px;
+    }
+}
+
+
+/* conejo 1 y 4 ------------------*/
+.layer-1 .oreja-der,
+.layer-6 .oreja-der {
+    background-color: papayawhip;
+}
+
+.layer-1 .oreja-izq, 
+.layer-6 .oreja-izq {
+   background-color: papayawhip;
+}
+
+.layer-1 .cabeza, 
+.layer-6 .cabeza {
+    background-color: papayawhip;
+}
+
+.layer-1 .cabeza,
+.layer-6 .cabeza{
+    background-color: papayawhip;
+}
+
+
+/* conejo 2 y 3 -----------------*/
+.layer-2 .oreja-der,
+.layer-4 .oreja-der {
+    background-color: gray;
+}
+
+.layer-2 .oreja-izq, 
+.layer-4 .oreja-izq {
+    background-color: gray;
+}
+
+.layer-2 .cabeza, 
+.layer-4 .cabeza {
+    background-color: gray;
+}
+
+

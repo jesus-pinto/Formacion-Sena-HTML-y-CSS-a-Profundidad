@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.phone {
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    width: 300px;
+    height: 600px;
+    background-color: #CCEFFF;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.30), 0 15px 12px rgb(0, 0, 0, 0.22);
+    overflow: hidden;
+    counter-reset: game;
+}   
+
+/* contador */
+input:checked {
+    counter-increment: game;
+}
+
+.total-conteo::after {
+    content: counter(game);
+}
+
+input[type=checkbox] {
+    position: absolute;
+    width: 50%;
+    height: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 32px;
+    z-index: 2;
+    opacity: 0;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 600;
+    font-size: 25PX;
+}
+
+h3 {
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: -15px;
+    text-align: center;
+}
